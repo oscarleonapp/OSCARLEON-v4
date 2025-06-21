@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="es-GT">
+<head>
+  <!-- Base URL -->
+  <!-- <base href="/" /> -->
+
+  <!-- Metadatos esenciales -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="author" content="OSCARLEON" />
+  <meta name="theme-color" content="#01c27f" />
+  <meta name="robots" content="index, follow" />
+  <meta name="googlebot" content="index, follow" />
+  <meta
+    name="description"
+    content="Certificaciones profesionales de OSCARLEON en Desarrollo Web, Marketing Digital, SEO y Seguridad Informática. Filtra según categoría y verifica cada certificación."
+  />
+
+  <!-- Title -->
+  <title>Certificaciones | OSCARLEON</title>
+
+  <!-- Canonical y hreflang -->
+  <link rel="canonical" href="https://oscarleon.app/certificaciones" />
+  <link rel="alternate" hreflang="es-ES" href="https://oscarleon.app/certificaciones" />
+  <link rel="alternate" hreflang="es-GT" href="https://oscarleon.app/certificaciones" />
+  <link rel="alternate" hreflang="es-419" href="https://oscarleon.app/certificaciones" />
+
+  <!-- Open Graph -->
+  <meta property="og:site_name" content="OSCARLEON | Desarrollo Web y SEO" />
+  <meta property="og:locale" content="es_GT" />
+  <meta
+    property="og:title"
+    content="Certificaciones | OSCARLEON"
+  />
+  <meta
+    property="og:description"
+    content="Explora mis certificaciones en Desarrollo Web, Marketing Digital, SEO Geolocalizado y Seguridad Informática. Filtra por categoría para ver detalles y verifica cada certificación."
+  />
+  <meta property="og:url" content="https://oscarleon.app/certificaciones" />
+  <meta
+    property="og:image"
+    content="https://oscarleon.app/assets/images/og-certificaciones.jpg"
+  />
+  <meta property="og:image:alt" content="Certificaciones OSCARLEON" />
+  <meta property="og:type" content="website" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta
+    name="twitter:title"
+    content="Certificaciones | OSCARLEON"
+  />
+  <meta
+    name="twitter:description"
+    content="Explora mis certificaciones en Desarrollo Web, Marketing Digital, SEO Geolocalizado y Seguridad Informática. Filtra por categoría para ver detalles y verifica cada certificación."
+  />
+  <meta
+    name="twitter:image"
+    content="https://oscarleon.app/assets/images/og-certificaciones.jpg"
+  />
+
+  <!-- Preload de imagen hero -->
+  <link rel="preload" as="image" href="https://oscarleon.app/assets/images/hero-certificaciones.jpg" />
+
+  <!-- Estilos CSS integrados -->
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Header / Navegación -->
+  <header>
+    <div class="container navbar">
+      <div class="logo">OSCAR<span style="color: white;">LEON</span></div>
+      <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+      <nav id="nav-menu">
+        <ul>
+          <li><a href="index.html" rel="noopener noreferrer">Inicio</a></li>
+          <li><a href="index.html#servicios-completos" rel="noopener noreferrer">Servicios</a></li>
+          <li><a href="clientes.html" rel="noopener noreferrer">Clientes</a></li>
+          <li><a href="certificaciones.html" rel="noopener noreferrer">Certificaciones</a></li>
+          <li><a href="/blog" rel="noopener noreferrer">Blog</a></li>
+        </ul>
+      </nav>
+      <a href="https://wa.me/50212345678?text=Hola,%20quiero%20información" target="_blank" rel="noopener noreferrer" class="cta-login">WhatsApp</a>
+    </div>
+  </header>
+
+  <!-- Hero Certificaciones -->
+  <section class="hero-certificaciones">
+    <div class="hero-content">
+      <h1>Mis Certificaciones Profesionales</h1>
+      <p>Filtra por categoría para ver cada una de mis acreditaciones y verifica la autenticidad de cada certificado.</p>
+    </div>
+  </section>
+
+  <!-- Sección Certificaciones -->
+  <section class="certificaciones">
+    <div class="container">
+      <h2>Certificaciones</h2>
+
+      <!-- FILTRO -->
+      <div class="filtro-categorias">
+        <button class="filtro-btn active" data-filtro="todos">Todos</button>
+        <button class="filtro-btn" data-filtro="Desarrollo Web">Desarrollo Web</button>
+        <button class="filtro-btn" data-filtro="Marketing Digital">Marketing Digital</button>
+        <button class="filtro-btn" data-filtro="SEO Geolocalizado">SEO Geolocalizado</button>
+        <button class="filtro-btn" data-filtro="Seguridad">Seguridad Informática</button>
+      </div>
+
+      <!-- GRILLA DE CERTIFICACIONES -->
+      <div class="grid-certificaciones">
+        <!-- Certificación 1 -->
+        <div class="cert-card" data-categoria="Desarrollo Web">
+          <img
+            src="https://oscarleon.app/assets/certs/frontend-developer.png"
+            alt="Certificación Frontend Developer"
+            class="cert-logo"
+          />
+          <h3>Frontend Developer</h3>
+          <p>Certificación en desarrollo de interfaces con HTML, CSS, JavaScript.</p>
+          <p class="fecha">Marzo 2024</p>
+          <a href="https://example.com/verify/frontend-developer" target="_blank" rel="noopener noreferrer" class="btn-verificar">Verificar</a>
+        </div>
+
+        <!-- Certificación 2 -->
+        <div class="cert-card" data-categoria="Marketing Digital">
+          <img
+            src="https://oscarleon.app/assets/certs/google-analytics.png"
+            alt="Google Analytics Individual Qualification"
+            class="cert-logo"
+          />
+          <h3>Google Analytics IQ</h3>
+          <p>Certificación oficial de Google Analytics para análisis web y métricas.</p>
+          <p class="fecha">Junio 2023</p>
+          <a href="https://example.com/verify/google-analytics-iq" target="_blank" rel="noopener noreferrer" class="btn-verificar">Verificar</a>
+        </div>
+
+        <!-- Certificación 3 -->
+        <div class="cert-card" data-categoria="Marketing Digital">
+          <img
+            src="https://oscarleon.app/assets/certs/hubspot-inbound.png"
+            alt="HubSpot Inbound Marketing"
+            class="cert-logo"
+          />
+          <h3>Inbound Marketing</h3>
+          <p>Certificación HubSpot sobre estrategias de atracción y conversión.</p>
+          <p class="fecha">Septiembre 2023</p>
+          <a href="https://example.com/verify/inbound-marketing" target="_blank" rel="noopener noreferrer" class="btn-verificar">Verificar</a>
+        </div>
+
+        <!-- Certificación 4 -->
+        <div class="cert-card" data-categoria="SEO Geolocalizado">
+          <img
+            src="https://oscarleon.app/assets/certs/semrush-seo.png"
+            alt="SEMrush SEO Fundamentals"
+            class="cert-logo"
+          />
+          <h3>SEO Fundamentals (SEMrush)</h3>
+          <p>Certificación sobre fundamentos de SEO, investigación de palabras clave y auditorías.</p>
+          <p class="fecha">Abril 2024</p>
+          <a href="https://example.com/verify/semrush-seo" target="_blank" rel="noopener noreferrer" class="btn-verificar">Verificar</a>
+        </div>
+
+        <!-- Certificación 5 -->
+        <div class="cert-card" data-categoria="Seguridad">
+          <img
+            src="https://oscarleon.app/assets/certs/ceh.png"
+            alt="Certified Ethical Hacker"
+            class="cert-logo"
+          />
+          <h3>Certified Ethical Hacker (CEH)</h3>
+          <p>Certificación en seguridad informática y pruebas de penetración.</p>
+          <p class="fecha">Enero 2024</p>
+          <a href="https://example.com/verify/ceh" target="_blank" rel="noopener noreferrer" class="btn-verificar">Verificar</a>
+        </div>
+
+        <!-- Certificación 6 -->
+        <div class="cert-card" data-categoria="Desarrollo Web">
+          <img
+            src="https://oscarleon.app/assets/certs/react-cert.png"
+            alt="React Professional"
+            class="cert-logo"
+          />
+          <h3>React Professional</h3>
+          <p>Certificación avanzada en desarrollo de aplicaciones con React JS.</p>
+          <p class="fecha">Diciembre 2023</p>
+          <a href="https://example.com/verify/react-professional" target="_blank" rel="noopener noreferrer" class="btn-verificar">Verificar</a>
+        </div>
+
+        <!-- Certificación 7 -->
+        <div class="cert-card" data-categoria="SEO Geolocalizado">
+          <img
+            src="https://oscarleon.app/assets/certs/moz-seo.png"
+            alt="Moz SEO Essentials"
+            class="cert-logo"
+          />
+          <h3>SEO Essentials (Moz)</h3>
+          <p>Certificación en prácticas esenciales de SEO y optimización on-page.</p>
+          <p class="fecha">Febrero 2024</p>
+          <a href="https://example.com/verify/moz-seo" target="_blank" rel="noopener noreferrer" class="btn-verificar">Verificar</a>
+        </div>
+
+        <!-- Certificación 8 -->
+        <div class="cert-card" data-categoria="Seguridad">
+          <img
+            src="https://oscarleon.app/assets/certs/comptia-security.png"
+            alt="CompTIA Security+"
+            class="cert-logo"
+          />
+          <h3>CompTIA Security+</h3>
+          <p>Certificación certificada en fundamentos de seguridad de redes y sistemas.</p>
+          <p class="fecha">Julio 2023</p>
+          <a href="https://example.com/verify/comptia-security" target="_blank" rel="noopener noreferrer" class="btn-verificar">Verificar</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección CTA Final -->
+  <section class="cta-final">
+    <h2>¿Te interesa verificar alguna de estas certificaciones?</h2>
+    <a
+      href="https://wa.me/50212345678?text=Hola,%20quiero%20más%20información%20sobre%20tus%20certificaciones"
+      class="btn-primary"
+      >Contáctanos Ahora</a
+    >
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 OSCARLEON. Todos los derechos reservados.</p>
+      <nav>
+        <ul>
+          <li><a href="aviso-privacidad.html" class="active" rel="noopener noreferrer">Aviso de Privacidad</a></li>
+          <li><a href="terminos-condiciones.html" rel="noopener noreferrer">Términos y Condiciones</a></li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
+
+  <!-- Scripts JS -->
+<script src="script.js"></script>
+</body>
+</html>

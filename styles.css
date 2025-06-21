@@ -1,0 +1,1251 @@
+/* ============================
+   styles.css (unificado)
+   ============================
+*/
+
+/* ---------------------------------
+   Reset y tipografía general
+   --------------------------------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+  line-height: 1.6;
+  color: #fff;
+}
+body {
+  background: #13161c;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+ul,
+ol {
+  list-style: none;
+}
+
+/* ---------------------------------
+   Contenedor central
+   --------------------------------- */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ---------------------------------
+   Header / Navegación (general)
+   --------------------------------- */
+header {
+  background: #0b0d11;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 0;
+}
+.navbar .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #01c27f;
+}
+
+/* Ocultar botón menú en escritorio; se mostrará en <768px */
+.navbar .menu-toggle {
+  display: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #01c27f;
+}
+.navbar nav ul {
+  display: flex;
+  gap: 25px;
+}
+.navbar nav ul li a {
+  font-size: 0.95rem;
+  color: #fff;
+  padding: 8px 12px;
+  border-radius: 4px;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+.navbar nav ul li a:hover {
+  background: #f0f0f0;
+  color: #13161c;
+}
+.navbar .cta-login {
+  padding: 8px 15px;
+  background: #ffffff;
+  color: #13161c;
+  border-radius: 4px;
+  font-size: 0.95rem;
+  transition: background 0.3s ease;
+}
+.navbar .cta-login:hover {
+  background: #019e6a;
+  color: #fff;
+}
+
+/* ---------------------------------
+   Hero (páginas específicas)
+   --------------------------------- */
+.hero {
+  background-image:
+    linear-gradient(
+      50deg,
+      rgba(3, 19, 14, 0.8) 10%,
+      rgba(1, 158, 106, 0.9) 100%
+    ),
+    linear-gradient(
+      -90deg,
+      rgba(1, 158, 106, 0.9) 100%,
+      rgba(3, 19, 14, 0.8) 20%
+    );
+  background-blend-mode: luminosity;
+  background-size: 200% 100%; /* clave para la animación */
+  background-position: 0% 50%;
+  animation: waveBackground 8s ease-in-out infinite;
+
+  /* Estilos existentes */
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100vh;
+  min-height: 400px;
+  padding: 80px 0;
+}
+
+@keyframes waveBackground {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+
+
+
+.hero::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* background: rgba(0, 0, 0, 0.1); */
+  z-index: 0;
+}
+.hero .hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 700px;
+  margin: 0 20px;
+}
+.hero h1 {
+  font-size: 3.5rem;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+.hero p {
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+}
+.btn {
+  display: inline-block;
+  padding: 12px 28px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 4px;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+.btn-primary {
+  background-color: #01c27f;
+  color: #fff;
+  border: none;
+}
+.btn-primary:hover {
+  background-color: #019e6a;
+  transform: scale(1.02);
+}
+
+/* Hero “Clientes” */
+.hero-clientes {
+  position: relative;
+ background-image:
+    linear-gradient(
+      50deg,
+      rgba(3, 19, 14, 0.8) 10%,
+      rgba(1, 158, 106, 0.9) 100%
+    ),
+    linear-gradient(
+      -90deg,
+      rgba(1, 158, 106, 0.9) 100%,
+      rgba(3, 19, 14, 0.8) 20%
+    );
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 60vh;
+  min-height: 350px;
+  background-blend-mode: luminosity;
+  background-size: 200% 100%; /* clave para la animación */
+  background-position: 0% 50%;
+  animation: waveBackground 8s ease-in-out infinite;
+}
+.hero-clientes::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 0;
+}
+.hero-clientes .hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+  margin: 0 20px;
+}
+.hero-clientes h1 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+.hero-clientes p {
+  font-size: 1.2rem;
+  margin-bottom: 25px;
+}
+
+/* Hero “Certificaciones” */
+.hero-certificaciones {
+  position: relative;
+  background-image: url("https://oscarleon.app/assets/images/hero-certificaciones.jpg");
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 50vh;
+  min-height: 300px;
+}
+.hero-certificaciones::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 0;
+}
+.hero-certificaciones .hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+  margin: 0 20px;
+}
+.hero-certificaciones h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+.hero-certificaciones p {
+  font-size: 1.1rem;
+}
+
+/* Hero “Detalle Caso” */
+.hero-caso {
+  position: relative;
+  background-image: url("https://oscarleon.app/assets/images/caso1-hero.jpg");
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 50vh;
+  min-height: 300px;
+}
+.hero-caso::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 0;
+}
+.hero-caso .hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+  margin: 0 20px;
+}
+.hero-caso h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+.hero-caso p {
+  font-size: 1.1rem;
+}
+
+/* ---------------------------------
+   Breadcrumbs (Detalle Caso)
+   --------------------------------- */
+.breadcrumbs {
+  background: #fff;
+  padding: 15px 0;
+  margin-bottom: 30px;
+}
+.breadcrumbs ol {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  font-size: 0.9rem;
+  color: #555;
+}
+.breadcrumbs li + li::before {
+  content: "›";
+  margin: 0 8px;
+  color: #aaa;
+}
+.breadcrumbs a {
+  color: #01c27f;
+}
+.breadcrumbs li:last-child {
+  color: #333;
+}
+
+/* ---------------------------------
+   Sección Servicios (Home)
+   --------------------------------- */
+.servicios-home {
+  background: #fff;
+  padding: 80px 0;
+}
+.servicios-home .container h2 {
+  font-size: 2rem;
+  margin-bottom: 40px;
+  text-align: center;
+  color: #555;
+}
+
+.servicios-home .container p {
+  font-size: 1rem;
+  margin-bottom: 40px;
+  text-align: center;
+  color: #0b0d11;
+}
+
+.servicios-home .grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+}
+.servicio-box {
+  background: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+  /* Borde blanco alrededor */
+  border: 2px solid #01c27f;
+
+  /* Radio de esquina para que quede redondeado */
+  border-radius: 8px;
+
+  /* Asegúrate de que el padding y el texto se vean bien sobre el fondo que elijas */
+  padding: 25px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+}
+.servicio-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+  transform: translateY(-5px);
+  /* Si el fondo es oscuro, puedes aclarar un poco el borde */
+  border-color: #01c27f;
+}
+.servicio-box .icono {
+  font-size: 2rem;
+  color: #555;
+  margin-bottom: 15px;
+}
+.servicio-box h3 {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  color: #555;
+}
+.servicio-box p {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+/* ---------------------------------
+   Sección Todos los Servicios (Home)
+   --------------------------------- */
+.servicios-completos {
+  background: #f9f9f9;
+  padding: 80px 0;
+}
+.servicios-completos .container h2 {
+  font-size: 2rem;
+  margin-bottom: 40px;
+  text-align: center;
+  color: #222;
+}
+.servicios-grid-completo {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+}
+.servicio-categoria {
+  background: #1e2229;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.servicio-categoria:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+}
+.servicio-categoria h3 {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  color: #01c27f;
+  text-align: center;
+}
+.servicio-categoria ul {
+  margin-top: 10px;
+}
+.servicio-categoria ul li {
+  font-size: 0.95rem;
+  color: #fff;
+  margin-bottom: 8px;
+  position: relative;
+  padding-left: 16px;
+}
+.servicio-categoria ul li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #01c27f;
+  font-size: 1rem;
+  line-height: 1;
+  top: 0;
+}
+
+/* ---------------------------------
+   Sección Sobre Nosotros (Home)
+   --------------------------------- */
+.sobre-nosotros {
+  background: linear-gradient(
+    to right,
+    #03130e 0%,
+    /* Verde oscuro a la izquierda */ #055034 100%
+      /* Verde más brillante a la derecha */
+  );
+  padding: 80px 0;
+}
+.sobre-nosotros .container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 40px;
+}
+.sobre-img {
+  flex: 1 1 300px;
+}
+.sobre-img img {
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+.sobre-text {
+  flex: 1 1 300px;
+}
+.sobre-text h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #fff;
+}
+.sobre-text p {
+  font-size: 1rem;
+  color: #fff;
+  margin-bottom: 20px;
+}
+.sobre-text .btn-secondary {
+  display: inline-block;
+  padding: 10px 22px;
+  font-size: 0.95rem;
+  background: #01c27f;
+  color: #fff;
+  border-radius: 4px;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+.sobre-text .btn-secondary:hover {
+  background: #019e6a;
+  transform: scale(1.02);
+}
+
+/* ---------------------------------
+   Sección Testimonios (Home)
+   --------------------------------- */
+.testimonios-home {
+  background: #fff;
+  padding: 80px 0;
+}
+.testimonios-home .container h2 {
+  font-size: 2rem;
+  margin-bottom: 40px;
+  text-align: center;
+  color: #222;
+}
+.testimonios-home .grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+.testimonios-home blockquote {
+  font-style: italic;
+  color: #555;
+  position: relative;
+  padding: 25px 20px 25px 60px;
+  background: #f1f1f1;
+  border-left: 5px solid #0b0d11;
+  border-radius: 6px;
+}
+.testimonios-home blockquote::before {
+  content: "“";
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  font-size: 2.5rem;
+  color: #01c27f;
+}
+.testimonios-home cite {
+  display: block;
+  margin-top: 15px;
+  font-size: 0.9rem;
+  color: #777;
+  text-align: right;
+}
+
+/* ---------------------------------
+   Sección Certificaciones
+   --------------------------------- */
+.certificaciones {
+  background: #fff;
+  padding: 60px 0;
+}
+.certificaciones .container h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  text-align: center;
+  color: #222;
+}
+/* Filtro de categorías (Certificaciones y Casos) */
+.filtro-categorias {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 40px;
+}
+.filtro-btn {
+  background: #fff;
+  border: 1px solid #ccc;
+  color: #555;
+  padding: 8px 16px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background 0.3s, border-color 0.3s;
+  font-size: 0.95rem;
+}
+.filtro-btn.active {
+  background: #01c27f;
+  border-color: #01c27f;
+  color: #fff;
+}
+/* Grid de tarjetas de certificación */
+.grid-certificaciones {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+}
+.cert-card {
+  background: #f9f9f9;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+.cert-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+}
+.cert-logo {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 15px;
+  object-fit: contain;
+}
+.cert-card h3 {
+  font-size: 1.1rem;
+  color: #01c27f;
+  margin-bottom: 8px;
+}
+.cert-card p {
+  font-size: 0.95rem;
+  color: #555;
+  margin-bottom: 12px;
+}
+.cert-card .fecha {
+  font-size: 0.85rem;
+  color: #777;
+  margin-bottom: 12px;
+}
+.cert-card .btn-verificar {
+  background: #01c27f;
+  color: #fff;
+  padding: 8px 20px;
+  font-size: 0.9rem;
+  border-radius: 4px;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+.cert-card .btn-verificar:hover {
+  background: #019e6a;
+  transform: scale(1.02);
+}
+
+/* ---------------------------------
+   Sección Logos de Clientes
+   --------------------------------- */
+.seccion-logos {
+  background: #fff;
+  padding: 60px 0 40px 0;
+}
+.seccion-logos .container h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  text-align: center;
+  color: #222;
+}
+.grid-logos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 30px;
+  align-items: center;
+  justify-items: center;
+}
+.logo-cliente {
+  width: 100%;
+  max-width: 120px;
+  filter: grayscale(70%);
+  transition: filter 0.3s ease, transform 0.3s ease;
+}
+.logo-cliente:hover {
+  filter: none;
+  transform: scale(1.05);
+}
+
+/* ---------------------------------
+   Sección Casos de Éxito
+   --------------------------------- */
+.casos-exito {
+  background: #f9f9f9;
+  padding: 60px 0;
+}
+.casos-exito .container h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  text-align: center;
+  color: #222;
+}
+.casos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+.caso-card {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+.caso-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+}
+.caso-imagen {
+  width: 100%;
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+}
+.caso-contenido {
+  padding: 20px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.caso-contenido h3 {
+  font-size: 1.25rem;
+  color: #0b0d11;
+  margin-bottom: 10px;
+}
+.caso-contenido p {
+  font-size: 0.95rem;
+  color: #555;
+  margin-bottom: 15px;
+  flex-grow: 1;
+  text-align: justify;
+}
+.caso-contenido .btn-detalle {
+  align-self: flex-start;
+  background: #01c27f;
+  color: #fff;
+  padding: 8px 20px;
+  font-size: 0.95rem;
+  border-radius: 4px;
+  transition: background 0.3s ease;
+}
+.caso-contenido .btn-detalle:hover {
+  background: #019e6a;
+}
+
+/* ---------------------------------
+   Sección Detalle Caso
+   --------------------------------- */
+.resumen-caso {
+  background: #fff;
+  padding: 60px 0;
+}
+.resumen-caso .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 40px;
+  align-items: start;
+}
+.resumen-texto h2 {
+  font-size: 1.8rem;
+  color: #222;
+  margin-bottom: 15px;
+}
+.resumen-texto p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 25px;
+}
+.resumen-texto .btn-secundario {
+  background: #01c27f;
+  color: #fff;
+  padding: 10px 24px;
+  font-size: 0.95rem;
+  border-radius: 4px;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+.resumen-texto .btn-secundario:hover {
+  background: #019e6a;
+  transform: scale(1.02);
+}
+.resumen-datos {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.dato-caso {
+  background: #f9f9f9;
+  padding: 20px;
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  text-align: center;
+}
+.dato-caso h3 {
+  font-size: 1.1rem;
+  color: #01c27f;
+  margin-bottom: 8px;
+}
+.dato-caso p {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.detalle-caso {
+  background: #fff;
+  padding: 60px 0;
+}
+.detalle-caso .container {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+.seccion-detalle {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: start;
+}
+.seccion-detalle h2 {
+  font-size: 1.8rem;
+  color: #222;
+  margin-bottom: 15px;
+}
+.seccion-detalle p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+}
+/* Invertir orden en pantallas pequeñas */
+@media (max-width: 768px) {
+  .seccion-detalle {
+    grid-template-columns: 1fr;
+  }
+}
+.challenge h2,
+.solucion h2,
+.resultados h2 {
+  color: #01c27f;
+}
+.resultados ul {
+  margin-top: 10px;
+}
+.resultados ul li {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 8px;
+  position: relative;
+  padding-left: 18px;
+}
+.resultados ul li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: #01c27f;
+}
+
+/* ---------------------------------
+   Galería Capturas (Detalle Caso)
+   --------------------------------- */
+.galeria-caso {
+  background: #f9f9f9;
+  padding: 60px 0;
+}
+.galeria-caso .container h2 {
+  font-size: 1.8rem;
+  color: #222;
+  margin-bottom: 30px;
+  text-align: center;
+}
+.galeria-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+.galeria-item {
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+.galeria-item img {
+  width: 100%;
+  display: block;
+}
+
+/* ---------------------------------
+   Sección Testimonios de Clientes
+   --------------------------------- */
+.testimonios-clientes {
+  background: #fff;
+  padding: 60px 0;
+}
+.testimonios-clientes .container h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  text-align: center;
+  color: #222;
+}
+.testimonios-slider {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+.testimonio-card {
+  background: #f1f1f1;
+  padding: 25px 20px 20px 50px;
+  position: relative;
+  border-radius: 6px;
+  font-style: italic;
+  color: #555;
+}
+.testimonio-card::before {
+  content: "“";
+  position: absolute;
+  top: 10px;
+  left: 15px;
+  font-size: 2.5rem;
+  color: #01c27f;
+}
+.testimonio-text {
+  margin-bottom: 15px;
+}
+.testimonio-cite {
+  display: block;
+  text-align: right;
+  font-size: 0.9rem;
+  color: #333;
+  font-style: normal;
+}
+
+/* ---------------------------------
+   Secciones CTA Final
+   --------------------------------- */
+.cta-final,
+.cta-home {
+  background: #0b0d11;
+  color: #fff;
+  padding: 60px 20px;
+  text-align: center;
+}
+.cta-final h2,
+.cta-home h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+.cta-final .btn-primary,
+.cta-home .btn-primary {
+  padding: 12px 30px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 4px;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+.cta-final .btn-primary:hover,
+.cta-home .btn-primary:hover {
+  background-color: #019e6a;
+  transform: scale(1.02);
+}
+
+/* ---------------------------------
+   Footer (general)
+   --------------------------------- */
+footer {
+  background: #0b0d11;
+  color: #ccc;
+  padding: 40px 0;
+  margin-top: auto;
+}
+footer p {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 0.9rem;
+}
+footer nav ul {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+}
+footer nav ul li a {
+  color: #ccc;
+  font-size: 0.9rem;
+  transition: color 0.3s ease;
+}
+footer nav ul li a:hover {
+  color: #fff;
+}
+
+/* ---------------------------------
+   Responsive: Menú móvil y grillas
+   --------------------------------- */
+@media (max-width: 768px) {
+  .navbar nav ul {
+    display: none;
+  }
+  .navbar nav ul li a {
+    color: #ffffff;
+    font-size: 1.1rem;
+  }
+  .navbar .menu-toggle {
+    display: block;
+    margin-left: auto; /* Empuja el toggle hacia el extremo derecho */
+    font-size: 1.5rem; /* Ya lo tenías, puedes ajustarlo si necesitas */
+    cursor: pointer;
+    color: #019e6a;
+  }
+  .navbar .cta-login {
+    display: none;
+  }
+  .navbar nav.active ul {
+    display: flex;
+    flex-direction: column;
+    background: #0b0d11;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    height: 100vh
+  }
+  .navbar nav.active ul li {
+    margin: 15px 0;
+    text-align: center;
+  }
+}
+
+/* ---------------------------------
+   Términos y Condiciones
+   --------------------------------- */
+
+/* Contenedor de la sección */
+.terminos-home {
+  background: #fff;
+  padding: 60px 0;
+}
+
+/* Título principal dentro de la sección */
+.terminos-home .container h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #222;
+  text-align: center;
+}
+
+/* Párrafos generales */
+.terminos-home .container p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+/* Estilos para subtítulos (H3) dentro del contenido */
+.terminos-container h3 {
+  font-size: 1.25rem;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  color: #01c27f;
+}
+
+/* Listas dentro de Términos y Condiciones */
+.terminos-container ul {
+  margin-left: 20px;
+  margin-bottom: 15px;
+}
+
+.terminos-container ul li {
+  margin-bottom: 8px;
+  line-height: 1.5;
+  color: #555;
+}
+
+/* ---------------------------------
+   Aviso de Privacidad
+   --------------------------------- */
+
+/* Fondo blanco y padding de la sección */
+.aviso-home {
+  background: #fff;
+  padding: 60px 0;
+}
+
+/* Título principal dentro de la sección */
+.aviso-home .container h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #222;
+  text-align: center;
+}
+
+/* Párrafos generales */
+.aviso-home .container p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+/* Subtítulos (h3) dentro del contenido */
+.aviso-container h3 {
+  font-size: 1.25rem;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  color: #01c27f;
+}
+
+/* Listas dentro de Aviso de Privacidad */
+.aviso-container ul {
+  margin-left: 20px;
+  margin-bottom: 15px;
+}
+
+.aviso-container ul li {
+  margin-bottom: 8px;
+  line-height: 1.5;
+  color: #555;
+}
+
+/* Enlaces dentro del Aviso */
+.aviso-container a {
+  color: #01c27f;
+  text-decoration: underline;
+}
+
+.aviso-container a:hover {
+  color: #019e6a;
+}
+
+/* Responsive: en móvil, ajusta tamaño de headings */
+@media (max-width: 768px) {
+  .aviso-home .container h1 {
+    font-size: 1.75rem;
+  }
+  .aviso-container h3 {
+    font-size: 1.125rem;
+  }
+}
+
+/* ---------------------------------
+   Animaciones y transiciones
+   --------------------------------- */
+.attention-animate {
+  position: relative;
+  z-index: 1;
+  animation: pulse 1.5s infinite;
+}
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(1, 195, 128, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 12px rgba(1, 195, 128, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(1, 195, 128, 0);
+  }
+}
+
+/* --------------------------------------------------
+   Animaciones para Hero: fadeInDown y fadeInUp
+   -------------------------------------------------- */
+
+/* El H1 bajará desde arriba y hará fade in */
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* El P subirá desde abajo y hará fade in */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Aplicar animación al <h1> dentro de .hero-content */
+.hero-content h1 {
+  opacity: 0; /* Empezar invisible */
+  animation: fadeInDown 1s ease-out forwards;
+  /* Si quieres que empiece inmediatamente, mantén 0s.
+     Si prefieres un pequeño retraso, usa por ejemplo: animation-delay: 0.2s; */
+  animation-delay: 0s;
+}
+
+/* Aplicar animación al <p> dentro de .hero-content */
+.hero-content p {
+  opacity: 0; /* Empezar invisible */
+  animation: fadeInUp 1s ease-out forwards;
+  animation-delay: 0.3s; /* Retraso de 0.3s para que salga después del H1 */
+}
+
+/* /* (Opcional) Si tu botón también está en hero y quieres que aparezca tras el párrafo: */
+.hero-content a.btn {
+  opacity: 0;
+  animation: fadeInUp 1s ease-out forwards;
+  animation-delay: 0.6s;
+}
+
+/* ---------------------------------
+   Botón Whatsapp flotante
+   --------------------------------- */
+     .whatsapp-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    background-color: #25D366;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    box-shadow: 2px 2px 10px rgba(255, 255, 255, 0.3);
+    z-index: 999;
+    transition: transform 0.3s ease;
+    text-decoration: none;
+  }
+
+  .whatsapp-float:hover {
+    transform: scale(1.1);
+    color: white;
+  }
+
+  /* @media (min-width: 768px) {
+  .whatsapp-float {
+    display: none;
+  }
+} */
+

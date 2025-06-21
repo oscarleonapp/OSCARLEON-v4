@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="es-GT">
+<head>
+  <!-- Base URL -->
+  <!-- <base href="/"> -->
+
+  <!-- Metadatos esenciales -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="OSCARLEON">
+  <meta name="theme-color" content="#01c27f">
+  <meta name="robots" content="index, follow">
+  <meta name="googlebot" content="index, follow">
+  <meta name="description" content="OSCARLEON: Desarrollo Web, Marketing Digital y SEO Geolocalizado. Creamos sitios modernos, rápidos y optimizados para posicionarte en Google.">
+
+  <!-- Title -->
+  <title>OSCARLEON | Desarrollo Web Profesional, Marketing Digital y SEO GEO que convierten</title>
+
+  <!-- Canonical y hreflang -->
+  <link rel="canonical" href="https://oscarleon.app/">
+  <link rel="alternate" hreflang="es-ES" href="https://oscarleon.app/">
+  <link rel="alternate" hreflang="es-GT" href="https://oscarleon.app/">
+  <link rel="alternate" hreflang="es-419" href="https://oscarleon.app/">
+
+  <!-- Open Graph -->
+  <meta property="og:site_name" content="OSCARLEON | Desarrollo Web y SEO">
+  <meta property="og:locale" content="es_GT">
+  <meta property="og:title" content="OSCARLEON | Desarrollo Web, Marketing Digital y SEO">
+  <meta property="og:description" content="Creamos sitios web modernos, rápidos y responsivos. Estrategias de Marketing Digital orientadas a conversión y SEO Geolocalizado.">
+  <meta property="og:url" content="https://oscarleon.app/">
+  <meta property="og:image" content="https://oscarleon.app/assets/images/og-home.jpg">
+  <meta property="og:image:alt" content="Portada OSCARLEON Desarrollo Web y SEO">
+  <meta property="og:type" content="website">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="OSCARLEON | Desarrollo Web, Marketing Digital y SEO">
+  <meta name="twitter:description" content="Creamos sitios web modernos, rápidos y responsivos. Estrategias de Marketing Digital orientadas a conversión y SEO Geolocalizado.">
+  <meta name="twitter:image" content="https://oscarleon.app/assets/images/og-home.jpg">
+
+  <!-- Sitemap -->
+  <link rel="sitemap" type="application/xml" title="Sitemap" href="https://oscarleon.app/sitemap.xml">
+
+  <!-- Preload de imagen principal -->
+  <link rel="preload" as="image" href="https://oscarleon.app/assets/images/hero-home.jpg">
+
+  <!-- Estilos CSS integrados -->
+<link rel="stylesheet" href="styles.css">
+
+<!-- Bootstrap Icons-->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+
+  <!-- JSON-LD Schema.org -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "name": "OSCARLEON",
+        "url": "https://oscarleon.app",
+        "logo": "https://oscarleon.app/assets/images/logo.png",
+        "sameAs": [
+          "https://www.facebook.com/oscarleonapp",
+          "https://www.linkedin.com/company/oscarleonapp"
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "url": "https://oscarleon.app/",
+        "name": "OSCARLEON",
+        "description": "Desarrollo Web, Marketing Digital y SEO Geolocalizado",
+        "publisher": {
+          "@type": "Organization",
+          "name": "OSCARLEON"
+        }
+      },
+      {
+        "@type": "LocalBusiness",
+        "name": "OSCARLEON",
+        "image": "https://oscarleon.app/assets/images/logo.png",
+        "url": "https://oscarleon.app",
+        "telephone": "+50212345678",
+        "email": "infooscarleonapp@gmail.com",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Av. Principal 123",
+          "addressLocality": "Ciudad de Guatemala",
+          "addressRegion": "Guatemala",
+          "postalCode": "01001",
+          "addressCountry": "GT"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": "14.6349",
+          "longitude": "-90.5069"
+        },
+        "openingHours": "Mo,Tu,We,Th,Fr 08:00-18:00",
+        "priceRange": "$$"
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <!-- Header / Navegación -->
+  <header>
+    <div class="container navbar">
+      <div class="logo">OSCAR<span style="color: white;">LEON</span></div>
+      <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+      <nav id="nav-menu">
+        <ul>
+          <li><a href="index.html" rel="noopener noreferrer">Inicio</a></li>
+          <li><a href="#servicios-completos" rel="noopener noreferrer">Servicios</a></li>
+          <li><a href="clientes.html" rel="noopener noreferrer">Clientes</a></li>
+          <li><a href="certificaciones.html" rel="noopener noreferrer">Certificaciones</a></li>
+          <li><a href="/blog" rel="noopener noreferrer">Blog</a></li>
+        </ul>
+      </nav>
+      <a href="https://wa.me/50212345678?text=Hola,%20quiero%20información" target="_blank" rel="noopener noreferrer" class="cta-login attention-animate">Contactar</a>
+    </div>
+  </header>
+
+<!-- Hero Section -->
+<section class="hero">
+  <div class="hero-content container">
+    <h1>Desarrollo Web Profesional, Marketing Digital y SEO GEO que convierten</h1>
+    <p>Expertos en Desarrollo Web a la medida, Estrategias de Marketing Digital, y Posicionamiento SEO en Google.</p>
+    <a href="clientes.html" class="btn btn-primary">Clientes satisfechos</a>
+  </div>
+</section>
+
+  <!-- Sección Servicios Estrella -->
+  <section class="servicios-home">
+    <div class="container">
+      <h2><span aria-hidden="true" style="color:#FFD700;">&#11088;</span> Servicios Estrella</h2>
+    <p>Desarrollo Web moderno, Marketing Digital orientado a conversión y SEO Geolocalizado para que tu negocio crezca.</p>
+      <div class="grid">
+        <div class="servicio-box">
+          <div class="icono">🌐</div>
+          <h3>Desarrollo Web</h3>
+          <p>Sitios responsivos y rápidos con HTML, CSS, JavaScript, React y WordPress.</p>
+        </div>
+        <div class="servicio-box">
+          <div class="icono">📈</div>
+          <h3>Marketing Digital</h3>
+          <p>Estrategias de Meta Ads, Google Ads y embudos de ventas que convierten.</p>
+        </div>
+        <div class="servicio-box">
+          <div class="icono">🔍</div>
+          <h3>SEO Geolocalizado</h3>
+          <p>Auditorías técnicas, contenido optimizado y link building para tu región.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección Todos los Servicios -->
+  <section class="servicios-completos" id="servicios-completos">
+    <div class="container">
+      <h2>Todos nuestros servicios</h2>
+      <div class="servicios-grid-completo">
+        <!-- Desarrollo de Sistemas -->
+        <div class="servicio-categoria">
+            <h3><span class="icono" aria-hidden="true">💻</span> Desarollo de Sistemas</h3>
+          <ul>
+            <li>Sistema de Inventarios</li>
+            <li>Sistema para Planillas</li>
+            <li>Tiendas en Línea</li>
+            <li>Sistema para ventas (POS)</li>
+            <li>Sistema para RRHH</li>
+            <li>Sistemas Educativos</li>
+          </ul>
+        </div>
+      <!-- Desarrollo de Apps -->
+        <div class="servicio-categoria">
+            <h3><span class="icono" aria-hidden="true">📱</span> Desarollo de Apps</h3>
+          <ul>
+            <li>Apps Android</li>
+            <li>Apps IOS</li>
+            <li>Apps Híbridas</li>
+            <li>Apps Web</li>
+          </ul>
+        </div>
+        <!-- Desarrollo Web -->
+        <div class="servicio-categoria">
+          <h3><span class="icono" aria-hidden="true">🌐</span> Desarollo Web</h3>
+          <ul>
+            <li>Web a la medida</li>
+            <li>Web con WordPress</li>
+            <li>Web con Wix</li>
+          </ul>
+        </div>
+                <!-- Servicios Web -->
+        <div class="servicio-categoria">
+          <h3><span class="icono" aria-hidden="true">🖥️</span> Servicios Web</h3>
+          <ul>
+            <li>Hosting</li>
+            <li>Dominios</li>
+            <li>Certificados SSL</li>
+            <li>Servidores</li>
+            <li>Soporte Profesional</li>
+            <li>Mantenimiento Profesional</li>
+            <li>Temas WordPress</li>
+            <li>Migraciones WordPress</li>
+            <li>Migraciones Prestashop</li>
+          </ul>
+        </div>
+        <!-- Community Manager -->
+        <div class="servicio-categoria">
+          <h3><span class="icono" aria-hidden="true">👥</span> Community Manager</h3>
+          <ul>
+            <li>Elite</li>
+            <li>Visionario</li>
+            <li>Emprendedor</li>
+          </ul>
+        </div>
+        <!-- Marketing -->
+        <div class="servicio-categoria">
+            <h3><span class="icono" aria-hidden="true">📊</span> Marketing</h3>
+          <ul>
+            <li>Publicidad en Google Ads</li>
+            <li>Publicidad en Facebook</li>
+            <li>Marketing de Contenido</li>
+            <li>Creación de Estrategias</li>
+            <li>Producción Audiovisual</li>
+          </ul>
+        </div>
+        <!-- Publicidad -->
+        <div class="servicio-categoria">
+            <h3><span class="icono" aria-hidden="true">📢</span> Publicidad</h3>
+          <ul>
+            <li>Facebook Ads</li>
+            <li>Instagram Ads</li>
+            <li>Google Ads</li>
+            <li>TikTok Ads</li>
+          </ul>
+        </div>
+        <!-- Diseño Gráfico -->
+        <div class="servicio-categoria">
+            <h3><span class="icono" aria-hidden="true">🎨</span> Diseño Gráfico</h3>
+          <ul>
+            <li>Logotipos</li>
+            <li>Portafolios</li>
+            <li>Tarjetas de Presentación</li>
+            <li>Branding</li>
+            <li>Manual de Identidad</li>
+            <li>Firma de Correos</li>
+            <li>Sellos</li>
+            <li>Hojas Membretadas</li>
+          </ul>
+        </div>
+        <!-- Posicionamiento -->
+        <div class="servicio-categoria">
+            <h3><span class="icono" aria-hidden="true">🔍</span> SEO Profesional</h3>
+          <ul>
+            <li>Google Analytics 4</li>
+            <li>Google Search Console</li>
+            <li>SEO Basic</li>
+            <li>SEO Standard</li>
+            <li>SEO Ultimate</li>
+          </ul>
+        </div>
+        <!-- Invitación Web -->
+        <div class="servicio-categoria">
+          <h3><span class="icono" aria-hidden="true">💌</span> Invitación Web</h3>
+          <ul>
+            <li>Bodas</li>
+            <li>Cumpleaños</li>
+            <li>15 Años</li>
+          </ul>
+        </div>
+        <!-- Consultorías en -->
+        <div class="servicio-categoria">
+            <h3><span class="icono" aria-hidden="true">🧑‍💼</span> Consultorías en</h3>
+          <ul>
+            <li>Publicidad Digital</li>
+            <li>Marketing</li>
+            <li>SEO</li>
+            <li>Seguridad Informática</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ¿Quién es OSCARLEON? -->
+  <section class="sobre-nosotros">
+    <div class="container">
+      <div class="sobre-img">
+        <img src="assets/img/quien-soy/02-oscarleon.png" alt="Equipo OSCARLEON trabajando en proyecto" loading="lazy">
+      </div>
+      <div class="sobre-text">
+        <h2>¿Quién es OSCARLEON?</h2>
+        <p>
+          Soy Licenciado en Comunicación, Publicista Profesional y Desarrollador de Software con amplia experiencia en soluciones digitales y tecnológicas.
+        </p>
+        <p>
+          A lo largo de mi carrera, he trabajado con personas, marcas y empresas, creando estrategias de Desarrollo Web, Marketing Digital y SEO que han optimizado sus procesos y mejorado su presencia en línea.
+        </p>
+        <p>
+          Mi objetivo es ofrecerle servicios personalizados y 100% profesionales que impulsen su proyecto. Estoy comprometido en entender sus necesidades para desarrollar soluciones de Posicionamiento en Google, Diseño Web, y otras herramientas digitales que transformen sus ideas en resultados.
+        </p>
+        <div style="display: flex; gap: 12px; margin-top: 16px;">
+          <a href="https://www.linkedin.com/in/oscarleonapp/" class="btn-secondary" style="background-color: #0a66c2; color: #fff; display: flex; align-items: center; gap: 6px;" target="_blank" rel="noopener noreferrer">
+            <i class="bi bi-linkedin"></i> LinkedIn
+          </a>
+          <a href="https://www.facebook.com/oscarleondev" class="btn-secondary" style="background-color: #1877f2; color: #fff; display: flex; align-items: center; gap: 6px;" target="_blank" rel="noopener noreferrer">
+            <i class="bi bi-facebook"></i> Facebook
+          </a>
+          <a href="https://www.instagram.com/oscarleon.app/" class="btn-secondary" style="background-color: #e4405f; color: #fff; display: flex; align-items: center; gap: 6px;" target="_blank" rel="noopener noreferrer">
+            <i class="bi bi-instagram"></i> Instagram
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección Testimonios -->
+  <section class="testimonios-home">
+    <div class="container">
+      <h2>Lo que dicen mis clientes</h2>
+      <div class="grid">
+        <blockquote>
+          "Tuve la suerte de encontrar a Oscar para que creara mi página web y trabajara en el SEO de mi negocio, y
+          honestamente, no le confiaría este trabajo a nadie más. Desde el primer día ha sido completamente profesional,
+          comprometido y enfocado en resultados reales. No solo entiende lo técnico, también entiende cómo posicionar un
+          negocio de verdad. Siempre está disponible, escucha lo que necesito y propone soluciones efectivas. Si buscas a
+          alguien confiable, con experiencia y que de verdad se preocupe por el crecimiento de tu negocio, Oscar es el
+          indicado."
+          <cite>– Julio Prera - Local Plumbers INC - Los Angeles California</cite>
+        </blockquote>
+        <blockquote>
+          "Llegue a la empresa de Oscar León gracias a la recomendación de un amigo. Llegue con muy buenas recomendaciones
+          y es hoy en día que me doy cuenta que no exagero. Es un gran profesional, muy dedicado y preocupado de entregar
+          las mejores soluciones y óptimos resultados para solucionar los problemas que mi sitio web presentaba.
+          Responsable con los tiempos de entrega y preocupado de resolver dudas e inquietudes.
+  
+          Gracias a él estamos logrando levantar y mejorar el sitio con muy buenos resultados"
+          <cite>– Juan Rojas - Web y SEO - Chile</cite>
+        </blockquote>
+        <blockquote>
+          "Excelente trabajo ✨️💯 puntos a todo"
+          <cite>– Yetzi Coronado - Invitación a boda - Guatemala</cite>
+        </blockquote>
+        <blockquote>
+          "Oscar es un gran profesional, amable, servicial y siempre esta dispuesto a dar la mejor solución para todo
+          ✨🙌🏼"
+          <cite>– Maria Fernanda Donis - Publicista - Guatemala</cite>
+        </blockquote>
+        <blockquote>
+          "Buen informatico recomendado al 100% dedicado a su trabajo y muy profesional. Gracias por la confianza
+          🎊☑️♣️♠️"
+          <cite>– Andres Garay - Webs y SEO - Chile</cite>
+        </blockquote>
+        <blockquote>
+          "Gracias por los servicios de asesoría, exelente explicación del desarrollo Web. Sin duda lo recomiendo 100/100
+          , creatividad y atención muy contenta con los resultados de mi página profesional para mi negocio."
+          <cite>– Nelly Pocón - Nelly Pocón Web - Guatemala</cite>
+        </blockquote>
+        <blockquote>
+          "El trabajo de nuestro programador en Psicointros ha sido excepcional. Ha demostrado un alto nivel de
+          profesionalismo, creatividad y compromiso tanto en la página web como en la gestión de redes sociales. Siempre
+          atento a nuestras necesidades y con soluciones eficientes. ¡Totalmente recomendado!"
+          <cite>– Lcda. Karen Sayle - Psicóloga PSICOINTROS - Guatemala</cite>
+        </blockquote>
+        <blockquote>
+          "Trabajo excelente y desde la responsabilidad y la vocación de lo que aporta en cada proyecto."
+          <cite>– Lcda. Maria Jose Portillo - Psicóloga PSICOINTROS - Guatemala</cite>
+        </blockquote>
+        <blockquote>
+          "Muy buen ambiente, profesión y de calidad."
+          <cite>– Lic. Aarón Moisés - Productos Audiovisual - Guatemala</cite>
+        </blockquote>
+        <blockquote>
+          "Ha sido excelente, un trabajo muy profesional y lo recomiendo a quien desee el servicio."
+          <cite>– Lic. Lesther Merida - Periodista y Comunicador - Guatemala</cite>
+        </blockquote>
+        <blockquote>
+          "Oscar es un profesional comprometido, enfocado siempre en los objetivos y metas deseadas. Su creatividad y
+          profesionalismo lo destacan en su trayectoria laboral."
+          <cite>– Carlos Chacón - Coordinador Regional Trade Marketing Centro America - Guatemala</cite>
+        </blockquote>
+        <blockquote>
+          "Tu profesionalismo y dedicación son verdaderamente admirables. Tu enfoque apasionado hacia tu trabajo y tu
+          habilidad para enfrentar desafíos con confianza son cualidades destacables. Me has impresionado con tu capacidad
+          para llevar a cabo proyectos de manera eficiente y
+          alcanzar resultados sobresalientes. Además, tu disposición para colaborar y tu actitud
+          positiva hacen que sea un placer trabajar contigo."
+          <cite>– Bryan Fuentes - Analista de Reclutamiento y selección - Guatemala</cite>
+        </blockquote>
+        <blockquote>
+          "Oscar es una persona bastante comprometida en sus proyectos, garantizando así el éxito de
+          los mismos, además de ser autodidacta lo que le da un valor agregado ya que siempre se
+          tendrá la confianza de que está usando tecnología de punta con altos estándares."
+          <cite>– Kevin Recinos - Data & AI Lead - Guatemala</cite>
+        </blockquote>
+        <blockquote>
+          "Excelente servicio, muy profesional y amable. Estoy feliz por los resultados."
+          <cite>– Lic. Jose Yela - Director Escuela Trabajo Social Landivar - Guatemala</cite>
+        </blockquote>
+        <blockquote>
+          "Fué todo un proceso de múltiples ideas que junto a la experiencia de Oscar León,
+          tomaron forma, obteniendo un resultado excepcional."
+          <cite>– Lic. Aarón Moisés - CEO Aarón Moisés Agencia - Guatemala</cite>
+        </blockquote>
+        <blockquote>
+          "Oscar tiene muy buena percepción para entender los negocios y a sus clientes."
+          <cite>– Carlos Garcia - Service Center Manager for Central America at SLC Trade - Guatemala</cite>
+        </blockquote>
+        <blockquote>
+          "Estoy muy contenta con el servicio de Oscar y su equipo :)
+          Son muy serviciales, profesionales y sobre todo muy conocedores del mundo digital 😁"
+          <cite>– Maria Fernanda Cardona - Inversiones Inginla - Guatemala</cite>
+        </blockquote>
+        <blockquote>
+          "Sin duda recomiendo a Oscar para el desarrollo de sitios web. Mantiene orden y profesionalismo durante sus
+          procesos de trabajo."
+          <cite>– Andruw Umaña - Portal Automotriz - Guatemala</cite>
+        </blockquote>
+        <blockquote>
+          "Super recomendado un excelente mentor y digno de seguir, gracias por compartir sus conocimientos, bien dicen
+          quien enseña aprende dos veces y me ha enseñado mucho, en esta vez tema redes sociales!!!"
+          <cite>– Marybell Maldonado - Asistente Administrativa RRHH - Guatemala</cite>
+        </blockquote>
+        <blockquote>
+          "Oscar excelente trabajo el que desempeña en lo digital. Felicitaciones y súper recomendado"
+          <cite>– Michelle Morales - Mercadeo y Publicidad - Guatemala</cite>
+        </blockquote>
+        <blockquote>
+          "Es un placer recomendar a Oscar por el servicio profesional de desarrollo web que realiza, siempre demostró un
+          compromiso excepcional con la calidad y la eficiencia en cada etapa del desarrollo, la asesoría personalizada
+          que brinda contribuye al proceso de alcanzar las expectativas que se tienen previstas, estamos satisfechos con
+          la página web que nos implementó desde cero."
+          <cite>– Pablo Sosa - RRHH Prodisa / Global Roofing - Guatemala</cite>
+        </blockquote>
+        <blockquote>
+          "Oscar esta capacitado, comprometido y enfocado en dar excelentes resultados a sus proyectos"
+          <cite>– Astrid Medina - Alcatel Mobile - Guatemala</cite>
+        </blockquote>
+        <blockquote>
+          "Oscar, es una persona comprometida, dedicada y lo mejor es que le gusta apoyar y compartir su conocimiento
+          garantizando la ayuda que da a otros, le da un valor agregado inspirando la confianza de que sus conocimientos
+          son amplios y certeros, apoyando en la transformación y desarrollo de lo que enseña, dando un valor humano a las
+          personas ayudando desinteresadamente."
+          <cite>– Marybell Maldonado - Asistente Administrativa RRHH - Guatemala</cite>
+        </blockquote>
+        <blockquote>
+          "Oscar ha apoyado a Emprende USAC en la transformación a desarrollar una feria digital con excelentes
+          resultados."
+          <cite>– Ing. Mirna Ayala - Ludiversity / Feria Emprende USAC - Guatemala </cite>
+        </blockquote>
+        <blockquote>
+          "Recomiendo a Oscar León por ser una persona muy profesional en su trabajo, responsable, ético y de buenas
+          costumbres."
+          <cite>– Martha Villatoro - Sales Specialist B2B - Guatemala </cite>
+        </blockquote>
+      </div>
+    </div>
+    <div style="display: flex; gap: 16px; justify-content: center; margin-top: 32px;">
+      <a href="https://www.google.com/search?sca_esv=7fef18164babfbf6&sxsrf=AE3TifNofyEYYGGmjJ963R8j4pXneTt_5A:1749949684228&si=AMgyJEtREmoPL4P1I5IDCfuA8gybfVI2d5Uj7QMwYCZHKDZ-E_43VAf05m1JnVCkP3JuT1Fs4XUABxCVk03t7lRX_drjuepoFhc7_GcQAEVrlAPWR10h62uo63HnBxSUH1xVMvk_00XElyKYeSR27Ns-cwTBF1tcK4_jORr3IeKvKMAP3lbmWUPkRZVWBKYO5kvqZJcwcflA&q=OSCARLEON:+Desarrollo+Web,+SEO+y+Marketing+Digital.+Opiniones&sa=X&ved=2ahUKEwiNnLbKnvKNAxXsSTABHWH-AG4Q0bkNegQIMBAD&biw=958&bih=910&dpr=1#mpd=~2165144852075867012/customers/reviews"
+        target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+        Comprobar Reseñas Google
+      </a>
+      <a href="https://www.linkedin.com/in/oscarleonapp/details/recommendations/" target="_blank"
+        rel="noopener noreferrer" class="btn btn-primary" style="background-color: #0a66c2;">
+        Comprobar Reseñas LinkedIn
+      </a>
+    </div>
+  </section>
+
+  <!-- Sección Llamado a la Acción -->
+  <section class="cta-home">
+    <h2>¿Listo para Impulsar tu Negocio?</h2>
+    <a href="https://wa.me/50212345678?text=Hola,%20quiero%20mis%20servicios" class="btn btn-primary attention-animate">¡Conversemos hoy mismo!</a>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 OSCARLEON. Todos los derechos reservados.</p>
+      <nav>
+        <ul>
+          <li><a href="aviso-privacidad.html" class="active" rel="noopener noreferrer">Aviso de Privacidad</a></li>
+          <li><a href="terminos-condiciones.html" rel="noopener noreferrer">Términos y Condiciones</a></li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
+
+  <!-- Botón flotante de WhatsApp con ícono Bootstrap -->
+<a href="https://api.whatsapp.com/send/?phone=50233940537&text=Hola+OSCARLEON+me+puedes+brindar+informaci%C3%B3n+acerca+de+tus+servicios&type=phone_number&app_absent=0" 
+   class="whatsapp-float" 
+   target="_blank" 
+   aria-label="Chat en WhatsApp">
+  <i class="bi bi-whatsapp"></i>
+</a>
+
+  <!-- Scripts JS -->
+  <script src="script.js"></script>
+</body>
+</html>
