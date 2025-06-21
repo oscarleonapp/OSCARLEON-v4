@@ -616,16 +616,14 @@ header {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  padding: 20px;
 }
 .cert-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
 }
 .cert-logo {
-  width: 80px;
-  height: 80px;
-  margin-bottom: 15px;
+  width: 100%;
+  height: auto;
   object-fit: contain;
 }
 .cert-card h3 {
