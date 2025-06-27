@@ -519,6 +519,13 @@ header {
   transform: scale(1.02);
 }
 
+/* Estilos para el contenedor de botones en la sección "Sobre Nosotros" */
+.sobre-nosotros .container .sobre-text div[style*="display: flex"] {
+  flex-wrap: wrap; /* Permite que los botones pasen a la siguiente línea */
+  justify-content: center; /* Centra los botones cuando hay espacio extra */
+}
+
+
 /* ---------------------------------
    Sección Testimonios (Home)
    --------------------------------- */
@@ -563,6 +570,17 @@ header {
   color: #777;
   text-align: right;
 }
+
+/* Estilos para el contenedor de botones en la sección "Testimonios" */
+.testimonios-home div[style*="display: flex"] {
+  flex-wrap: wrap; /* Permite que los botones pasen a la siguiente línea */
+  justify-content: center; /* Centra los botones */
+}
+
+.testimonios-home div[style*="display: flex"] a.btn {
+  margin-bottom: 10px; /* Añade un margen inferior a los botones cuando están apilados */
+}
+
 
 /* ---------------------------------
    Sección Certificaciones
