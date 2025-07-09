@@ -1,0 +1,69 @@
+# ===============================
+# Seguridad Web (HTTP Headers)
+# ===============================
+<IfModule mod_headers.c>
+  # Fuerza HTTPS (HSTS)
+  Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
+
+  # Política de Seguridad de Contenido (CSP)
+  Header set Content-Security-Policy "default-src 'self'; style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net; script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://www.googletagmanager.com https://connect.facebook.net https://www.clarity.ms; img-src 'self' data: https:; font-src 'self' https://cdn.jsdelivr.net; connect-src 'self' https://api.example.com"
+
+  # Protección MIME
+  Header set X-Content-Type-Options "nosniff"
+
+  # Protección Clickjacking
+  Header set X-Frame-Options "SAMEORIGIN"
+
+  # Política de Referencia
+  Header set Referrer-Policy "strict-origin-when-cross-origin"
+
+  # Políticas de permisos del navegador
+  Header set Permissions-Policy "geolocation=(), microphone=(), camera=()"
+
+  # Política de recursos incrustados
+  Header set Cross-Origin-Resource-Policy "same-origin"
+  Header set Cross-Origin-Embedder-Policy "require-corp"
+</IfModule>
+
+# ===============================
+# Reescrituras (friendly URLs si usas .html o CMS)
+# ===============================
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteCond %{HTTPS} off
+  RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+</IfModule>
+
+# ===============================
+# Compresión de archivos (mejora de velocidad)
+# ===============================
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript application/javascript application/json
+</IfModule>
+
+# ===============================
+# Cache estática (rendimiento)
+# ===============================
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType image/jpg "access plus 30 days"
+  ExpiresByType image/jpeg "access plus 30 days"
+  ExpiresByType image/png "access plus 30 days"
+  ExpiresByType image/gif "access plus 30 days"
+  ExpiresByType text/css "access plus 7 days"
+  ExpiresByType application/javascript "access plus 7 days"
+  ExpiresByType text/javascript "access plus 7 days"
+  ExpiresByType application/font-woff2 "access plus 30 days"
+</IfModule>
+
+# ===============================
+# Protección básica (opcional)
+# ===============================
+# Desactiva listado de directorios
+Options -Indexes
+
+# Evita acceso a archivos sensibles
+<FilesMatch "\.(htaccess|htpasswd|env|ini|log)$">
+  Order Allow,Deny
+  Deny from all
+</FilesMatch>
