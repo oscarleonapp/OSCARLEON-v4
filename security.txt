@@ -1,0 +1,9 @@
+# security.txt para oscarleon.app
+Contact: mailto:infooscarleonapp@gmail.com
+Expires: 2026-07-08T00:00:00.000Z
+Encryption: https://oscarleon.app/pgp-key.txt
+Acknowledgements: https://oscarleon.app/#testimonios
+Preferred-Languages: es, en
+Canonical: https://oscarleon.app/.well-known/security.txt
+Policy: https://oscarleon.app/terminos-condiciones.html
+Hiring: https://oscarleon.app/contacto.html
