@@ -1,0 +1,18 @@
+/* TEAM */
+Developer: Oscar León
+Site: https://oscarleon.app
+Facebook: https://www.facebook.com/oscarleondev
+Instagram: https://www.instagram.com/oscarleon.app/
+LinkedIn: https://www.linkedin.com/in/oscarleonapp/
+Location: Ciudad de Guatemala, Guatemala
+
+/* SITE */
+Standards: HTML5, CSS3, JavaScript
+Components: LiteSpeed, GA4, Meta Pixel, Microsoft Clarity
+Last update: 2025-07-08
+
+/* THANKS */
+Thanks to all my clients and collaborators.
+
+/* ENJOY */
+Built with care and passion for web, marketing & SEO.
