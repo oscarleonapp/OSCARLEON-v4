@@ -172,7 +172,24 @@
   <div class="hero-content container">
     <h1>Desarrollo Web Profesional, Marketing Digital y SEO GEO que convierten</h1>
     <p>Expertos en Desarrollo Web a la medida, Estrategias de Marketing Digital, y Posicionamiento SEO en Google.</p>
-    <a href="clientes.html" class="btn btn-primary">Clientes satisfechos</a>
+    <a href="clientes.html" class="btn pulse-soft" style="background-color: #fff; color: #0b0d11; text-transform: uppercase;">Clientes satisfechos</a>
+    <style>
+      .pulse-soft {
+      animation: pulseSoft 1.6s infinite;
+      transition: box-shadow 0.3s;
+      }
+      @keyframes pulseSoft {
+      0% {
+        box-shadow: 0 0 0 0 rgba(1, 194, 127, 0.3);
+      }
+      70% {
+        box-shadow: 0 0 0 10px rgba(1, 194, 127, 0);
+      }
+      100% {
+        box-shadow: 0 0 0 0 rgba(1, 194, 127, 0);
+      }
+      }
+    </style>
   </div>
 </section>
 
