@@ -1,4 +1,12 @@
+# robots.txt para oscarleon.app
+
 User-agent: *
-Disallow:
+Disallow: /admin/
+Disallow: /cgi-bin/
+Disallow: /private/
+Disallow: /tmp/
+Disallow: /404.html
+
+Allow: /
 
 Sitemap: https://oscarleon.app/sitemap.xml
