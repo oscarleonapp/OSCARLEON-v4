@@ -32,6 +32,10 @@
   RewriteEngine On
   RewriteCond %{HTTPS} off
   RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+  # Redirect legacy hotel & tourism URLs missing the correct path
+  RewriteRule ^servicios/desarrollo-web-para-hoteles-y-turismo-en-guatemala/(.*)$ servicios/desarrollo-web-para-hoteles-y-turismo-en/$1 [L,R=301]
+  # Redirect older web development URLs that omit the /guatemala/ segment
+  RewriteRule ^servicios/desarrollo-web/((?!guatemala/).*)$ servicios/desarrollo-web/guatemala/$1 [L,R=301]
 </IfModule>
 
 # ===============================
