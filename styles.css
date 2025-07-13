@@ -110,9 +110,9 @@ header {
    Hero (páginas específicas)
    --------------------------------- */
 .hero {
-  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.6)),
+  background: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)),
               url('/assets/img/oficina/oficina.png') center center / cover no-repeat;
-  background-blend-mode: overlay;
+  /* background-blend-mode: overlay; */
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
