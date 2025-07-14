@@ -5,24 +5,31 @@
   # Fuerza HTTPS (HSTS)
   Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
 
-  # Política de Seguridad de Contenido (CSP)
-  Header set Content-Security-Policy "default-src 'self'; style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net; script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://www.googletagmanager.com https://connect.facebook.net https://www.clarity.ms; img-src 'self' data: https:; font-src 'self' https://cdn.jsdelivr.net; connect-src 'self' https://api.example.com"
+  # Política de Seguridad de Contenido (CSP) optimizada para fuentes externas
+  Header set Content-Security-Policy "
+    default-src 'self';
+    style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://cdnjs.cloudflare.com https://fonts.googleapis.com;
+    script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.jsdelivr.net https://cdnjs.cloudflare.com https://www.googletagmanager.com https://connect.facebook.net https://www.clarity.ms;
+    img-src 'self' data: https:;
+    font-src 'self' https://fonts.gstatic.com https://cdn.jsdelivr.net https://cdnjs.cloudflare.com data:;
+    connect-src 'self' https: https://api.example.com;
+    frame-src 'self' https:;"
 
   # Protección MIME
-  Header set X-Content-Type-Options "nosniff"
+  Header always set X-Content-Type-Options "nosniff"
 
   # Protección Clickjacking
-  Header set X-Frame-Options "SAMEORIGIN"
+  Header always set X-Frame-Options "SAMEORIGIN"
 
   # Política de Referencia
-  Header set Referrer-Policy "strict-origin-when-cross-origin"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
 
   # Políticas de permisos del navegador
-  Header set Permissions-Policy "geolocation=(), microphone=(), camera=()"
+  Header always set Permissions-Policy "geolocation=(), microphone=(), camera=()"
 
-  # Política de recursos incrustados
-  Header set Cross-Origin-Resource-Policy "same-origin"
-  Header set Cross-Origin-Embedder-Policy "require-corp"
+  # Protección contra carga cruzada
+  Header always set Cross-Origin-Resource-Policy "same-origin"
+  Header always set Cross-Origin-Embedder-Policy "require-corp"
 </IfModule>
 
 # ===============================
@@ -32,8 +39,10 @@
   RewriteEngine On
   RewriteCond %{HTTPS} off
   RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
   # Redirect legacy hotel & tourism URLs missing the correct path
   RewriteRule ^servicios/desarrollo-web-para-hoteles-y-turismo-en-guatemala/(.*)$ servicios/desarrollo-web-para-hoteles-y-turismo-en/$1 [L,R=301]
+
   # Redirect older web development URLs that omit the /guatemala/ segment
   RewriteRule ^servicios/desarrollo-web/((?!guatemala/).*)$ servicios/desarrollo-web/guatemala/$1 [L,R=301]
 </IfModule>
